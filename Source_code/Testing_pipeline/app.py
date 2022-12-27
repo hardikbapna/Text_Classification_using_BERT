@@ -12,5 +12,9 @@ if __name__ == '__main__':
     path= config.locations['path']
     LoadModel(path)
 
+<<<<<<< HEAD
     print("Model is Loaded in main.")
     print("Hello")
+=======
+    print("Model is Loaded in main.")
+>>>>>>> cd66cb9 (Fourth Commit:)
