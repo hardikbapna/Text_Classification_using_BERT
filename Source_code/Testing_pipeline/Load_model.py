@@ -20,3 +20,6 @@ class LoadModel():
         except Exception as e:
             print("Entered Exception: Model could not be loaded.")
             print("Error is: {}".format(e))
+
+
+print("Remove")
