@@ -1,5 +1,7 @@
 #This class is used to load the trained model.
 
+import Config_Files.testing_pipeline_config as config
+
 import tensorflow as tf
 import os
 
@@ -13,8 +15,8 @@ class LoadModel():
     def load_model(self):
         try:
             print("Loading  the model")
-            trained_path= self.path + '\Trained_Models\sentiment_model'
-            loaded_model = tf.keras.models.load_model(trained_path)
+            trained_path= config.locations['trained_model_path']
+            self.loaded_model = tf.keras.models.load_model(trained_path)
             print("Loaded the model")
 
         except Exception as e:
@@ -22,4 +24,3 @@ class LoadModel():
             print("Error is: {}".format(e))
 
 
-print("Remove")

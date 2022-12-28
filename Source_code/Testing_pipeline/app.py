@@ -1,15 +1,24 @@
 #This file runs the main/app of the testing pipeline.
 
-from Load_model import LoadModel
 from Config_Files import testing_pipeline_config as config
+from prediction import Prediction
+
 import os
 
 
 if __name__ == '__main__':
 
     print('Running the main function' )
+    try:
+        path= config.locations['path']
+        input_text = 'I loved the movie'
+        pred_obj= Prediction()
+        output_index, output_prob= pred_obj.prediction_values(input_text)
+        print("Output Index is: ", output_index)
+        print("Output Probability is: ", output_prob)
 
-    path= config.locations['path']
-    LoadModel(path)
 
-    print("Model is Loaded in main.")
+        print("Model is Loaded in main.")
+
+    except Exception as e:
+        print (e)
