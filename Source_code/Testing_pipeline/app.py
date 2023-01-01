@@ -3,10 +3,15 @@
 from Config_Files import testing_pipeline_config as config
 from prediction import Prediction
 
-import os
+from Source_code.Testing_pipeline.Load_model import load_model
 
+import os
+load_model()
 
 if __name__ == '__main__':
+
+
+
 
     print('Running the main function' )
     try:
